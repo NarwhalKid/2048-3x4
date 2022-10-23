@@ -42,6 +42,17 @@ var tilenum = '0';
 var tilenum = document.getElementsByClassName('tile-position-' + tilex + '-' + tiley)[0].firstChild.innerText;
 tilenum = parseInt(tilenum);
 tilenum = (Math.log(tilenum) / Math.log(2)).toString();
+if (tilenum == 10) {
+   tilenum = "a"
+} else if (tilenum == 11) {
+    tilenum = "b"
+} else if (tilenum == 12) {
+    tilenum = "c"
+} else if (tilenum == 13) {
+    tilenum = "d"
+} else if (tilenum > 13) {
+    tilenum = 2
+}
 }
 code += tilenum;
 }
